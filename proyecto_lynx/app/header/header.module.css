@@ -1,7 +1,153 @@
-.header{
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    color:#333;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
+ 
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+ 
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.logoText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  letter-spacing: -0.01em;
+}
+ 
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #f0fdf8;
+  border: 1px solid #d1fae5;
+  border-radius: 999px;
+  padding: 0.3rem 0.5rem;
+}
+ 
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  position: relative;
+}
+ 
+.navLink:hover {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+ 
+.navLink.active {
+  background-color: #1D9E75;
+  color: #ffffff;
+}
+ 
+.chatIcon {
+  display: flex;
+  align-items: center;
+}
+ 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1D9E75;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  line-height: 1;
+}
+ 
+.navLink.active .badge {
+  background-color: #ffffff;
+  color: #1D9E75;
+}
+ 
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+ 
+.loginBtn {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+ 
+.loginBtn:hover {
+  color: #1D9E75;
+  background-color: #f0fdf8;
+}
+ 
+.registerBtn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.45rem 1.1rem;
+  background-color: #1D9E75;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+ 
+.registerBtn:hover {
+  background-color: #15805e;
+  transform: translateY(-1px);
+}
+ 
+.registerBtn:active {
+  transform: translateY(0);
+}
+ 
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+  }
+ 
+  .nav {
+    display: none;
+  }
+ 
+  .loginBtn {
+    display: none;
+  }
 }
