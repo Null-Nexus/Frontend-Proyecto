@@ -1,0 +1,91 @@
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+.card {
+  background: #f5f6f7;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background: #0d9488;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.list {
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.item {
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.item h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.item p {
+  margin: 2px 0;
+  font-size: 13px;
+}
+
+/* Prioridades */
+.alta {
+  background: #f8d7da;
+  border-left: 5px solid #dc2626;
+}
+
+.media {
+  background: #fef3c7;
+  border-left: 5px solid #f59e0b;
+}
+
+.baja {
+  background: #d1fae5;
+  border-left: 5px solid #10b981;
+}
+
+/* Leyenda */
+.legend {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #6ee7b7;
+  border-radius: 12px;
+  background: #f0fdfa;
+}
+
+.legend-item {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.dot.alta { background: #dc2626; }
+.dot.media { background: #f59e0b; }
+.dot.baja { background: #10b981; }
