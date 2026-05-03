@@ -1,19 +1,17 @@
 import Image from "next/image";
- feature/josueCalendario
+import Header from "./header/header";
 import Calendario from "./calendario/calendario";
-
-export default function Home() {
-  return (
-    <Calendario/>
 import PanelAlumno from "./PanelAlumno/PanelAlumno";
 import ProxAct from "./ProxAct/ProxAct";
 
 export default function Home() {
   return (
     <>
+      <Header />
+      <Calendario />
       <PanelAlumno />
       <ProxAct />
     </>
- main
   );
+}
 }
