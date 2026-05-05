@@ -1,0 +1,143 @@
+.footerContainer {
+  background-color: #00897b;
+  color: #ffffff;
+  padding: 60px 40px 20px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.footerLogoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footerLogoCircle {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.footerTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.footerDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 300px;
+}
+
+.footerHeading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerList li {
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+
+.footerList a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footerList a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.85;
+}
+
+.icon {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.socialCircle {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.socialCircle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footerBottom {
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Responsivo para tablets y móviles */
+@media (max-width: 1024px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    padding: 40px 20px 20px 20px;
+  }
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .footerDescription {
+    max-width: 100%;
+  }
+}
