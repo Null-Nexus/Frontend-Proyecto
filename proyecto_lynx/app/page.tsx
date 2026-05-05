@@ -14,11 +14,7 @@ export default function Home() {
       <Calendario />
       <ProxAct />
       <Tutores />
-    </>
-  );
-}
       <Footer />
     </>
   );
 }
-
