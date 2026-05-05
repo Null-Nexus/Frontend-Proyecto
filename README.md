@@ -8,3 +8,4 @@ Reealizar la sección del panel de alumnos, esta sección debe estar parametriza
 
 Realizar la sección de próximas actividades - Bruno
  main
+ 
