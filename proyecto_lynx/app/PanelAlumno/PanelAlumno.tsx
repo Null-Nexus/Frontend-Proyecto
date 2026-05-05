@@ -1,4 +1,4 @@
-import styles from "./PanleAlumno.module.css"
+import styles from "./PanelAlumno.module.css"
 
 export default function PanelAlumno() {
     return (

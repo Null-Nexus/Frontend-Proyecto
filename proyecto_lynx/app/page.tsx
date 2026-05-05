@@ -3,6 +3,7 @@ import Header from "./header/header";
 import Calendario from "./calendario/calendario";
 import PanelAlumno from "./PanelAlumno/PanelAlumno";
 import ProxAct from "./ProxAct/ProxAct";
+import Tutores from "./Tutores/Tutores";
 import Footer from "./Footer/footer";
 
 export default function Home() {
@@ -12,6 +13,10 @@ export default function Home() {
       <PanelAlumno />
       <Calendario />
       <ProxAct />
+      <Tutores />
+    </>
+  );
+}
       <Footer />
     </>
   );
