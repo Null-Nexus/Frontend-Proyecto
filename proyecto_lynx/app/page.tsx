@@ -16,18 +16,9 @@ export default function Home() {
          <Calendario />
          <ProxAct />
       </div>
-      <AsesoriasA />
-    </>
-  );
-}
-      <Calendario />
-      <ProxAct />
       <Tutores />
-    </>
-  );
-}
+      <AsesoriasA />
       <Footer />
     </>
   );
 }
-
