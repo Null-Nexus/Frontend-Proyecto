@@ -6,11 +6,14 @@ import ProxAct from "./ProxAct/ProxAct";
 import AsesoriasA from "./AsesoriasA/AsesoriasA";
 import Tutores from "./Tutores/Tutores";
 import Footer from "./Footer/footer";
+import Registro from "./Registro/Registro";
 
 export default function Home() {
   return (
     <>
+
       <Header />
+      <Registro />
       <PanelAlumno />
       <div className="cont">     
          <Calendario />
