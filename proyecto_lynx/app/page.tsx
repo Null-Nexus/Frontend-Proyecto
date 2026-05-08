@@ -3,6 +3,7 @@ import Header from "./header/header";
 import Calendario from "./calendario/calendario";
 import PanelAlumno from "./PanelAlumno/PanelAlumno";
 import ProxAct from "./ProxAct/ProxAct";
+import AsesoriasA from "./AsesoriasA/AsesoriasA";
 import Tutores from "./Tutores/Tutores";
 import Footer from "./Footer/footer";
 
@@ -11,10 +12,14 @@ export default function Home() {
     <>
       <Header />
       <PanelAlumno />
-      <Calendario />
-      <ProxAct />
+      <div className="cont">     
+         <Calendario />
+         <ProxAct />
+      </div>
       <Tutores />
+      <AsesoriasA />
       <Footer />
     </>
   );
 }
+
