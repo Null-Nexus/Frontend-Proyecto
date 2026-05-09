@@ -2,7 +2,6 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  /* Asegúrate de que la foto esté en public/images/bg-home.jpg */
   background: url('https://www.gaceta.unam.mx/wp-content/uploads/2025/03/250318-com2-des-f1-medio-siglo-FES-Acatlan.jpg') no-repeat center center/cover;
 }
 

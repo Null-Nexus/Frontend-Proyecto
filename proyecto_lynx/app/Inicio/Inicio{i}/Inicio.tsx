@@ -1,3 +1,4 @@
+import Link from 'next/link'; // 1. Importamos Link
 import styles from './Inicio.module.css';
 
 export default function HeroSection() {
@@ -14,8 +15,17 @@ export default function HeroSection() {
           </p>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.btnPrimary}>Registrarme como Alumno</button>
-            <button className={styles.btnSecondary}>Registrarme como Asesor</button>
+            {/* 2. Envolvemos los botones con Link y definimos la ruta (href) */}
+            
+            <Link href="/registro-alumno" className={styles.linkWrapper}>
+              <button className={styles.btnPrimary}>Registrarme como Alumno</button>
+            </Link>
+            
+            <Link href="/registro-asesor" className={styles.linkWrapper}>
+              <button className={styles.btnSecondary}>Registrarme como Asesor</button>
+            </Link>
+
+            
           </div>
 
           <div className={styles.statsGrid}>
