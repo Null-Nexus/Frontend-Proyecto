@@ -1,5 +1,6 @@
 import styles from './header.module.css';
- 
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header className={styles.header}>
@@ -33,7 +34,9 @@ export default function Header() {
  
       <div className={styles.actions}>
         <a href="#" className={styles.loginBtn}>Iniciar Sesión</a>
-        <a href="#" className={styles.registerBtn}>Registrarse</a>
+        <Link href="/Registro" className={styles.registerBtn}>
+          Registrarse
+        </Link>
       </div>
     </header>
   );
