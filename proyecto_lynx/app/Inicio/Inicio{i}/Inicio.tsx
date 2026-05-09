@@ -1,4 +1,4 @@
-import styles from './Registro.module.css';
+import styles from './Inicio.module.css';
 
 export default function HeroSection() {
   return (
