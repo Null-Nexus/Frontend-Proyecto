@@ -1,0 +1,195 @@
+/* AsesorAlumno.module.css */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding: 50px 70px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 3.2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: #4b5563;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.top h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin: 0;
+}
+
+.top span {
+  font-size: 1.5rem;
+  color: #0d9488;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row p {
+  font-size: 1.4rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.row strong {
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressHeader p {
+  font-size: 1.4rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.progressHeader strong {
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #0d9488;
+  border-radius: 999px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.messageBtn,
+.historyBtn {
+  flex: 1;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.messageBtn {
+  background: #0d9488;
+  color: white;
+}
+
+.messageBtn:hover {
+  opacity: 0.9;
+}
+
+.historyBtn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.historyBtn:hover {
+  background: #e5e7eb;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top h2 {
+    font-size: 1.5rem;
+  }
+
+  .top span {
+    font-size: 1.1rem;
+  }
+}
