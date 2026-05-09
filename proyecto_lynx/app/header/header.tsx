@@ -1,4 +1,4 @@
-import Link from 'next/link'; // Importamos Link
+import Link from 'next/link';
 import styles from './header.module.css';
 
 export default function Header() {
@@ -37,11 +37,8 @@ export default function Header() {
       </nav>
 
       <div className={styles.actions}>
-        {/* Botones principales de acción */}
-        <Link href="/login" className={styles.loginBtn}>
-          Iniciar Sesión
-        </Link>
-        <Link href="/registro-alumno" className={styles.registerBtn}>
+        <a href="#" className={styles.loginBtn}>Iniciar Sesión</a>
+        <Link href="/Registro" className={styles.registerBtn}>
           Registrarse
         </Link>
       </div>
