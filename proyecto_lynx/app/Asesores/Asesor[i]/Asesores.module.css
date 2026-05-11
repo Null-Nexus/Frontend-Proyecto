@@ -25,7 +25,7 @@
  
 /* ── Contenedor principal ── */
 .container {
-  max-width: 48rem;
+  max-width: 95rem;
   margin: 0 auto;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -50,11 +50,12 @@
   cursor: pointer;
   background: transparent;
   color: #ffffff;
-  transition: background-color 0.15s;
+  transition: transform 0.2s ease, background-color 0.15s;
 }
  
 .tab:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.08);
 }
  
 .tabActive {
@@ -232,3 +233,118 @@
 .btnDeclinar:hover {
   background-color: #e6f4ee;
 }
+
+/* ══════════════════════════════
+   SECCION MIS CREDENCIALES
+══════════════════════════════ */
+ 
+.credencialesSection {
+  margin-top: 2rem;
+  background: #ffffff;
+  padding: 2.5rem 1rem;
+}
+ 
+.credencialesHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+ 
+.credencialesTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+ 
+.credencialesSubtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+ 
+.credencialesTopBar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+ 
+.btnSubir {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a6645;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+ 
+.btnSubir:hover {
+  background-color: #145236;
+}
+ 
+.credencialesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+ 
+.credencialCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: box-shadow 0.15s;
+}
+ 
+.credencialCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credencialLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+ 
+.credencialIconWrap {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: #e6f4ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.credencialIconCheck {
+  color: #1a6645;
+}
+ 
+.credencialNombre {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.credencialMeta {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin: 0.125rem 0 0;
+}
+ 
+.credencialMeta span {
+  margin: 0 0.25rem;
+  color: #d1d5db;
+}
+ 

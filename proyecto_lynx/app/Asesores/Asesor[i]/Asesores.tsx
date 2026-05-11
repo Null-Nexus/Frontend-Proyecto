@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./Asesores.module.css";
 
+
 type TabKey = "todas" | "completadas" | "confirmadas" | "pendientes";
 
 interface Session {
@@ -30,7 +31,7 @@ const TABS: { key: TabKey; label: string }[] = [
   { key: "pendientes", label: "Pendientes" },
 ];
 
-export default function AgendaAsesoria() {
+export function Asesores() {
   const [activeTab, setActiveTab] = useState<TabKey>("todas");
   const [sessions, setSessions] = useState<Session[]>(initialSessions);
 
@@ -144,4 +145,89 @@ function StatusBadge({ status }: { status: Session["status"] }) {
     pendiente: "Pendiente",
   };
   return <span className={classMap[status]}>{labels[status]}</span>;
+}
+
+// ══════════════════════════════
+// TIPOS
+// ══════════════════════════════
+interface Credencial {
+  id: number;
+  nombre: string;
+  tipo: string;
+  fecha: string;
+  estado: "verificado" | "pendiente";
+}
+ 
+const credenciales: Credencial[] = [
+  { id: 1, nombre: "Doctorado en Física - UNAM", tipo: "Título", fecha: "2010-06-15", estado: "verificado" },
+  { id: 2, nombre: "Cédula Profesional #12345678", tipo: "Cédula", fecha: "2010-08-20", estado: "verificado" },
+  { id: 3, nombre: "Certificación Docente UNAM", tipo: "Certificación", fecha: "2018-03-10", estado: "verificado" },
+];
+ 
+
+ 
+export function MisCredenciales() {
+  const handleSubir = () => {
+    // TODO: abrir modal o file picker
+    alert("Abrir modal de subida");
+  };
+ 
+  return (
+    <div className={styles.credencialesSection}>
+      {/* Encabezado */}
+      <div className={styles.credencialesHeader}>
+        <h2 className={styles.credencialesTitle}>Mis Credenciales</h2>
+        <p className={styles.credencialesSubtitle}>
+          Gestiona tus documentos académicos que verifican tu capacidad para dar asesorías
+        </p>
+      </div>
+ 
+      {/* Botón subir */}
+      <div className={styles.credencialesTopBar}>
+        <button className={styles.btnSubir} onClick={handleSubir}>
+          <span aria-hidden="true">⬆️</span>
+          Subir Credencial
+        </button>
+      </div>
+ 
+      {/* Lista */}
+      <div className={styles.credencialesList}>
+        {credenciales.map((c) => (
+          <CredencialCard key={c.id} credencial={c} />
+        ))}
+      </div>
+    </div>
+  );
+}
+ 
+// ══════════════════════════════
+// TARJETA INDIVIDUAL
+// ══════════════════════════════
+function CredencialCard({ credencial: c }: { credencial: Credencial }) {
+  return (
+    <div className={styles.credencialCard}>
+      <div className={styles.credencialLeft}>
+        <div className={styles.credencialIconWrap}>
+          <span className={styles.credencialIconCheck} aria-hidden="true">✔️</span>
+        </div>
+        <div>
+          <p className={styles.credencialNombre}>{c.nombre}</p>
+          <p className={styles.credencialMeta}>
+            {c.tipo} <span>·</span> {c.fecha}
+          </p>
+        </div>
+      </div>
+      <span className={c.estado === "verificado" ? styles.badgeVerificado : styles.badgePendiente}>
+        {c.estado === "verificado" ? "Verificado" : "Pendiente"}
+      </span>
+    </div>
+  );
+}
+ export default function AsesorPanel() {
+  return (
+    <>
+      <Asesores />
+      <MisCredenciales />
+    </>
+  );
 }
