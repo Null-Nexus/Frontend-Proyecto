@@ -22,10 +22,10 @@ export default function Header() {
 
       <nav className={styles.nav}>
         {/* Cambiamos <a> por <Link> */}
-        <Link href="/" className={`${styles.navLink} ${styles.active}`}>Inicio</Link>
-        <Link href="/alumno" className={styles.navLink}>Alumno</Link>
-        <Link href="/asesor" className={styles.navLink}>Asesor</Link>
-        <Link href="/chat" className={styles.navLink}>
+        <Link href="/Inicio" className={`${styles.navLink} ${styles.active}`}>Inicio</Link>
+        <Link href="/Alumno" className={styles.navLink}>Alumno</Link>
+        <Link href="/Asesores" className={styles.navLink}>Asesor</Link>
+        <Link href="/NotFound" className={styles.navLink}>
           <span className={styles.chatIcon}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -37,7 +37,7 @@ export default function Header() {
       </nav>
 
       <div className={styles.actions}>
-        <a href="#" className={styles.loginBtn}>Iniciar Sesión</a>
+        <a href="/Login" className={styles.loginBtn}>Iniciar Sesión</a>
         <Link href="/Registro" className={styles.registerBtn}>
           Registrarse
         </Link>
