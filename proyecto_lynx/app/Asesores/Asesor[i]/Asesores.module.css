@@ -205,16 +205,16 @@
   font-size: 0.75rem;
   padding: 0.375rem 0.75rem;
   border-radius: 0.375rem;
-  background-color: #1a6645;
-  color: #ffffff;
+  background-color: transparent;
+  color: #1a6645;
   font-weight: 500;
-  border: none;
+  border: 1px solid #1a6645;
   cursor: pointer;
   transition: background-color 0.15s;
 }
  
 .btnConfirmar:hover {
-  background-color: #145236;
+  background-color: #e6f4ee;
 }
  
 .btnDeclinar {

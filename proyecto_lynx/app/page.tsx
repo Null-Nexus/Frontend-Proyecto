@@ -7,7 +7,7 @@ import AsesoriasA from "./AsesoriasA/AsesoriasA";
 import Tutores from "./Tutores/Tutores";
 import Footer from "./Footer/footer";
 import Inicio from "./Inicio/Inicio{i}/Inicio";
-
+import Asesores from "./Asesores/Asesor[i]/Asesores"
 export default function Home() {
   return (
     <>
@@ -22,6 +22,7 @@ export default function Home() {
       </div>
       <Tutores />
       <AsesoriasA />
+      <Asesores />
       <Footer />
     </>
   );
