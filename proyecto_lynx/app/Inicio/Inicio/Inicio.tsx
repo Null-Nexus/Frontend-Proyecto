@@ -1,7 +1,7 @@
-import Link from 'next/link'; // 1. Importamos Link
+import Link from 'next/link';
 import styles from './Inicio.module.css';
 
-export default function HeroSection() {
+export default function Inicio() {
   return (
     <section className={styles.heroContainer}>
       <div className={styles.overlay}>
