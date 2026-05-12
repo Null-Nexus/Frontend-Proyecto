@@ -17,11 +17,11 @@ export default function Inicio() {
           <div className={styles.buttonGroup}>
             {/* 2. Envolvemos los botones con Link y definimos la ruta (href) */}
             
-            <Link href="/registro-alumno" className={styles.linkWrapper}>
+            <Link href="/Registro" className={styles.registerBtn}>
               <button className={styles.btnPrimary}>Registrarme como Alumno</button>
             </Link>
             
-            <Link href="/registro-asesor" className={styles.linkWrapper}>
+            <Link href="/Registro" className={styles.registerBtn}>
               <button className={styles.btnSecondary}>Registrarme como Asesor</button>
             </Link>
 
