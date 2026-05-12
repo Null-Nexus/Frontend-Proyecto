@@ -41,6 +41,7 @@ export default function Header() {
         <Link href="/Registro" className={styles.registerBtn}>
           Registrarse
         </Link>
+
       </div>
     </header>
   );
