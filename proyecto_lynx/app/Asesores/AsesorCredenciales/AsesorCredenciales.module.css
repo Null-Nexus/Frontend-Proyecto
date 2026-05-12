@@ -1,0 +1,128 @@
+.section {
+  background: #ffffff;
+  padding: 2.5rem 1rem;
+}
+ 
+/* ── Encabezado ── */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+ 
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+ 
+.subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+ 
+/* ── Botón subir ── */
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+ 
+.btnSubir {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a6645;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+ 
+.btnSubir:hover {
+  background-color: #145236;
+}
+ 
+/* ── Lista ── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+ 
+/* ── Tarjeta ── */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+ 
+.cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+ 
+.iconWrap {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: #e6f4ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+ 
+.nombre {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+ 
+.meta {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin: 0.125rem 0 0;
+}
+ 
+.meta span {
+  margin: 0 0.25rem;
+  color: #d1d5db;
+}
+ 
+/* ── Badges ── */
+.badgeVerificado {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.875rem;
+  border-radius: 9999px;
+  background-color: #e6f4ee;
+  color: #1a6645;
+  white-space: nowrap;
+}
+ 
+.badgePendiente {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.875rem;
+  border-radius: 9999px;
+  background-color: #fffbeb;
+  color: #b45309;
+  white-space: nowrap;
+}
