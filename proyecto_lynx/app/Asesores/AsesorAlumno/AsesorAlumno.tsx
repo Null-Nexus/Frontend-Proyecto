@@ -7,7 +7,6 @@ export default function AsesorAlumno() {
     <section className={styles.container}>
       <div className={styles.header}>
         <h1>Mis Estudiantes</h1>
-
         <p>
           Seguimiento del progreso de los estudiantes que asesoras
         </p>
@@ -15,7 +14,6 @@ export default function AsesorAlumno() {
 
       <div className={styles.grid}>
         {/* CARD 1 */}
-
         <div className={styles.card}>
           <div className={styles.top}>
             <div>
@@ -62,7 +60,6 @@ export default function AsesorAlumno() {
         </div>
 
         {/* CARD 2 */}
-
         <div className={styles.card}>
           <div className={styles.top}>
             <div>
@@ -108,7 +105,190 @@ export default function AsesorAlumno() {
           </div>
         </div>
 
-        {/* AGREGA MÁS CARDS AQUÍ */}
+        {/* CARD 3 - NUEVA */}
+        <div className={styles.card}>
+          <div className={styles.top}>
+            <div>
+              <h2>Ana Martínez</h2>
+              <span>Bioquímica I</span>
+            </div>
+          </div>
+
+          <div className={styles.info}>
+            <div className={styles.row}>
+              <p>Sesiones completadas</p>
+              <strong>12</strong>
+            </div>
+
+            <div className={styles.row}>
+              <p>Última sesión</p>
+              <strong>2024-12-20</strong>
+            </div>
+
+            <div className={styles.progressHeader}>
+              <p>Progreso</p>
+              <strong>90%</strong>
+            </div>
+
+            <div className={styles.progressBar}>
+              <div
+                className={styles.progress}
+                style={{ width: "90%" }}
+              />
+            </div>
+          </div>
+
+          <div className={styles.actions}>
+            <button className={styles.messageBtn}>
+              <MessageSquare size={18} />
+              Mensaje
+            </button>
+
+            <button className={styles.historyBtn}>
+              <FileText size={18} />
+              Historial
+            </button>
+          </div>
+        </div>
+
+        {/* CARD 4 - NUEVA */}
+        <div className={styles.card}>
+          <div className={styles.top}>
+            <div>
+              <h2>Carlos Mendoza</h2>
+              <span>Física General</span>
+            </div>
+          </div>
+
+          <div className={styles.info}>
+            <div className={styles.row}>
+              <p>Sesiones completadas</p>
+              <strong>3</strong>
+            </div>
+
+            <div className={styles.row}>
+              <p>Última sesión</p>
+              <strong>2024-12-11</strong>
+            </div>
+
+            <div className={styles.progressHeader}>
+              <p>Progreso</p>
+              <strong>35%</strong>
+            </div>
+
+            <div className={styles.progressBar}>
+              <div
+                className={styles.progress}
+                style={{ width: "35%" }}
+              />
+            </div>
+          </div>
+
+          <div className={styles.actions}>
+            <button className={styles.messageBtn}>
+              <MessageSquare size={18} />
+              Mensaje
+            </button>
+
+            <button className={styles.historyBtn}>
+              <FileText size={18} />
+              Historial
+            </button>
+          </div>
+        </div>
+
+        {/* CARD 5 - NUEVA */}
+        <div className={styles.card}>
+          <div className={styles.top}>
+            <div>
+              <h2>Sofía Castro</h2>
+              <span>Cálculo Diferencial</span>
+            </div>
+          </div>
+
+          <div className={styles.info}>
+            <div className={styles.row}>
+              <p>Sesiones completadas</p>
+              <strong>7</strong>
+            </div>
+
+            <div className={styles.row}>
+              <p>Última sesión</p>
+              <strong>2024-12-19</strong>
+            </div>
+
+            <div className={styles.progressHeader}>
+              <p>Progreso</p>
+              <strong>50%</strong>
+            </div>
+
+            <div className={styles.progressBar}>
+              <div
+                className={styles.progress}
+                style={{ width: "50%" }}
+              />
+            </div>
+          </div>
+
+          <div className={styles.actions}>
+            <button className={styles.messageBtn}>
+              <MessageSquare size={18} />
+              Mensaje
+            </button>
+
+            <button className={styles.historyBtn}>
+              <FileText size={18} />
+              Historial
+            </button>
+          </div>
+        </div>
+
+        {/* CARD 6 - NUEVA */}
+        <div className={styles.card}>
+          <div className={styles.top}>
+            <div>
+              <h2>Luis Rodríguez</h2>
+              <span>Termodinámica</span>
+            </div>
+          </div>
+
+          <div className={styles.info}>
+            <div className={styles.row}>
+              <p>Sesiones completadas</p>
+              <strong>10</strong>
+            </div>
+
+            <div className={styles.row}>
+              <p>Última sesión</p>
+              <strong>2024-12-14</strong>
+            </div>
+
+            <div className={styles.progressHeader}>
+              <p>Progreso</p>
+              <strong>80%</strong>
+            </div>
+
+            <div className={styles.progressBar}>
+              <div
+                className={styles.progress}
+                style={{ width: "80%" }}
+              />
+            </div>
+          </div>
+
+          <div className={styles.actions}>
+            <button className={styles.messageBtn}>
+              <MessageSquare size={18} />
+              Mensaje
+            </button>
+
+            <button className={styles.historyBtn}>
+              <FileText size={18} />
+              Historial
+            </button>
+          </div>
+        </div>
+
       </div>
     </section>
   );

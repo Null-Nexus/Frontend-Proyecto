@@ -7,8 +7,8 @@
 /* Sección Izquierda */
 .heroSection {
   flex: 1.2;
-  background: linear-gradient(rgba(10, 48, 45, 0.85), rgba(10, 48, 45, 0.85)), 
-              url('https://luiscardenas.mx/wp-content/uploads/2021/11/FES-ACATLAN.jpg'); 
+  background: linear-gradient(rgba(64, 129, 124, 0.85), rgba(10, 48, 45, 0.85)), 
+              url('https://www.acatlan.unam.mx/images/fes_05.jpg'); 
   background-size: cover;
   background-position: center;
   color: white;

@@ -2,72 +2,86 @@
 
 .container {
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   background: #f3f4f6;
-  padding: 50px 70px;
+  
+  /* REDUCIDO: De 50px 70px a un respiro más sutil */
+  padding: 32px 40px;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 50px;
+  /* REDUCIDO: De 50px a 30px */
+  margin-bottom: 30px;
 }
 
 .header h1 {
-  font-size: 3.2rem;
+  /* REDUCIDO: De 3.2rem (~51px) a un tamaño estándar de título de 2rem (~32px) */
+  font-size: 2rem;
   color: #0f172a;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .header p {
-  font-size: 1.5rem;
+  /* REDUCIDO: De 1.5rem (~24px) a 1rem (~16px) */
+  font-size: 1rem;
   color: #4b5563;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  /* REDUCIDO: De 32px a 20px */
+  gap: 20px;
 }
 
 .card {
   background: white;
-  border-radius: 24px;
-  padding: 28px;
+  /* REDUCIDO: Bordes un poco más finos (de 24px a 14px) */
+  border-radius: 14px;
+  /* REDUCIDO: De 28px a 20px */
+  padding: 20px;
   border: 1px solid #d1d5db;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  /* REDUCIDO: Sombra menos pesada */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .top {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 30px;
+  gap: 14px;
+  /* REDUCIDO: De 30px a 18px */
+  margin-bottom: 18px;
 }
 
 .avatar {
-  width: 68px;
-  height: 68px;
+  /* REDUCIDO: De 68px a 52px */
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .top h2 {
-  font-size: 2rem;
+  /* REDUCIDO: De 2rem a 1.25rem (~20px) */
+  font-size: 1.25rem;
   color: #111827;
   margin: 0;
 }
 
 .top span {
-  font-size: 1.5rem;
+  /* REDUCIDO: De 1.5rem a 0.95rem (~15px) */
+  font-size: 0.95rem;
   color: #0d9488;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  /* REDUCIDO: De 18px a 12px */
+  gap: 12px;
 }
 
 .row {
@@ -77,13 +91,15 @@
 }
 
 .row p {
-  font-size: 1.4rem;
+  /* REDUCIDO: De 1.4rem a 0.9rem (~14px) */
+  font-size: 0.9rem;
   color: #4b5563;
   margin: 0;
 }
 
 .row strong {
-  font-size: 1.3rem;
+  /* REDUCIDO: De 1.3rem a 0.9rem (~14px) */
+  font-size: 0.9rem;
   color: #111827;
 }
 
@@ -94,19 +110,22 @@
 }
 
 .progressHeader p {
-  font-size: 1.4rem;
+  /* REDUCIDO: De 1.4rem a 0.9rem */
+  font-size: 0.9rem;
   color: #4b5563;
   margin: 0;
 }
 
 .progressHeader strong {
-  font-size: 1.3rem;
+  /* REDUCIDO: De 1.3rem a 0.9rem */
+  font-size: 0.9rem;
   color: #111827;
 }
 
 .progressBar {
   width: 100%;
-  height: 12px;
+  /* REDUCIDO: Barra de progreso más estética y delgada (de 12px a 8px) */
+  height: 8px;
   background: #e5e7eb;
   border-radius: 999px;
   overflow: hidden;
@@ -120,23 +139,27 @@
 
 .actions {
   display: flex;
-  gap: 14px;
-  margin-top: 28px;
+  gap: 10px;
+  /* REDUCIDO: De 28px a 18px */
+  margin-top: 18px;
 }
 
 .messageBtn,
 .historyBtn {
   flex: 1;
-  height: 52px;
+  /* REDUCIDO: Botones más estilizados (de 52px a 40px) */
+  height: 40px;
   border: none;
-  border-radius: 14px;
-  font-size: 1.2rem;
+  /* REDUCIDO: De 14px a 8px */
+  border-radius: 8px;
+  /* REDUCIDO: De 1.2rem a 0.9rem */
+  font-size: 0.9rem;
   font-weight: 600;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
 
   cursor: pointer;
   transition: 0.2s ease;
@@ -165,20 +188,25 @@
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 30px 20px;
+    padding: 20px 16px;
+  }
+
+  .header {
+    margin-bottom: 20px;
   }
 
   .header h1 {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
   }
 
   .header p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
   .grid {
@@ -186,10 +214,10 @@
   }
 
   .top h2 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
   .top span {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
   }
 }

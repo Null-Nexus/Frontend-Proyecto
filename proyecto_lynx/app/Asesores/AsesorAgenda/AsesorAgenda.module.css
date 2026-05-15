@@ -1,6 +1,6 @@
 /* ── Página ── */
 .page {
-  min-height: 100vh;
+  min-height: 65vh;
   background: #ffffff;
   padding: 2.5rem 1rem;
 }
