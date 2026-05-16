@@ -1,17 +1,25 @@
 .calendarioWrapper {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 60px;
 }
 
 .tablaCalendario {
     border-collapse: collapse;
-    width: 350px;
+    width: 100%;
+    max-width: 700px;
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     font-family: sans-serif;
+    margin: 0 auto;
+}
+
+.tablaCalendario th,
+.tablaCalendario td {
+    width: 14%;
+    height: 60px;
 }
 
 .tituloMes {
@@ -25,7 +33,7 @@
 .tablaCalendario th {
     background-color: #13b484;
     color: white;
-    padding: 10px;
+    padding: 20px;
     font-size: 0.8rem;
 }
 
