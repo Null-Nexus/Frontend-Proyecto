@@ -6,6 +6,9 @@ import Inicio from "./Inicio/Inicio/Inicio";
 export default function Home() {
   return (
     <>
+      
+     
+      <div className="cont">
         <Inicio />
     </>
   );
