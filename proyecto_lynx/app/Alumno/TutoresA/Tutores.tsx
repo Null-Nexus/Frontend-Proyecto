@@ -69,10 +69,16 @@ export default function Tutores() {
         {tutores.map((tutor, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.imageContainer}>
-              <img src={tutor.img} alt={tutor.nombre} />
-              <span className={styles.badge}>✔</span>
+               {tutor.img ? 
+               (<img src={tutor.img} alt={tutor.nombre} /> ) 
+               : (<div className={styles.placeholder}>
+                {tutor.nombre.charAt(0)}
             </div>
+            )}
 
+  <span className={styles.badge}>✔</span>
+
+</div>
             <div className={styles.cardBody}>
               <h3>{tutor.nombre}</h3>
               <p className={styles.area}>{tutor.area}</p>

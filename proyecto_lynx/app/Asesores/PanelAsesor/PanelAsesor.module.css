@@ -6,7 +6,8 @@
     #0b7a67 100%
   );
 
-  padding: 42px 60px 70px;
+  /* REDUCIDO: Relleno general más compacto */
+  padding: 30px 40px 40px;
 
   color: white;
   box-sizing: border-box;
@@ -17,14 +18,16 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
 
-  margin-bottom: 36px;
+  /* REDUCIDO: Espacio inferior con las tarjetas */
+  margin-bottom: 24px;
 }
 
 .avatar {
-  width: 86px;
-  height: 86px;
+  /* REDUCIDO: De 86px a 70px */
+  width: 70px;
+  height: 70px;
 
   border-radius: 50%;
   object-fit: cover;
@@ -33,21 +36,23 @@
 .name {
   margin: 0;
 
-  font-size: 3rem;
+  /* REDUCIDO: De 3rem (~48px) a un tamaño más normal de 1.8rem (~28px) */
+  font-size: 1.8rem;
   font-weight: 700;
 
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .info {
-  margin-top: 8px;
+  margin-top: 6px;
 
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
 
-  font-size: 1.5rem;
+  /* REDUCIDO: De 1.5rem (~24px) a 1rem (~16px) */
+  font-size: 1rem;
 
   color: #d6f0e8;
 }
@@ -64,7 +69,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 22px;
+  gap: 16px;
 }
 
 .card {
@@ -72,13 +77,16 @@
 
   border: 1px solid rgba(255, 255, 255, 0.15);
 
-  border-radius: 22px;
+  /* REDUCIDO: Bordes un poco menos exagerados */
+  border-radius: 14px;
 
-  padding: 28px;
+  /* REDUCIDO: De 28px a 20px */
+  padding: 20px;
 
   backdrop-filter: blur(6px);
 
-  min-height: 180px;
+  /* REDUCIDO: De 180px a 130px */
+  min-height: 130px;
 
   display: flex;
   flex-direction: column;
@@ -86,10 +94,11 @@
 }
 
 .iconBox {
-  width: 58px;
-  height: 58px;
+  /* REDUCIDO: Iconos más discretos (de 58px a 40px) */
+  width: 40px;
+  height: 40px;
 
-  border-radius: 16px;
+  border-radius: 10px;
 
   background: rgba(255, 255, 255, 0.14);
 
@@ -97,20 +106,30 @@
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 24px;
+  /* REDUCIDO: De 24px a 14px */
+  margin-bottom: 14px;
+}
+
+/* Si usas iconos SVG o fuentes de iconos adentro, esto asegura que se achiquen */
+.iconBox svg, .iconBox i {
+  font-size: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .value {
   margin: 0;
 
-  font-size: 3rem;
+  /* REDUCIDO: Los números grandes bajan de 3rem (~48px) a 2rem (~32px) */
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .label {
-  margin-top: 8px;
+  margin-top: 4px;
 
-  font-size: 1.5rem;
+  /* REDUCIDO: De 1.5rem (~24px) a 0.95rem (~15px) */
+  font-size: 0.95rem;
 
   color: #d6f0e8;
 }
@@ -125,20 +144,22 @@
 
 @media (max-width: 700px) {
   .panel {
-    padding: 28px 18px 40px;
+    padding: 24px 16px 30px;
   }
 
   .header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
   }
 
   .name {
-    font-size: 2rem;
+    /* Ajustado para móviles */
+    font-size: 1.5rem;
   }
 
   .info {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .cards {
@@ -146,6 +167,11 @@
   }
 
   .card {
-    min-height: 140px;
+    min-height: auto;
+    padding: 16px;
+  }
+  
+  .iconBox {
+    margin-bottom: 10px;
   }
 }

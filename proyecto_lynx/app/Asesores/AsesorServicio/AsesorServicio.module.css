@@ -4,27 +4,31 @@
   width: 100%;
   min-height: 100vh;
   background: #f3f4f6;
-  padding: 40px 50px;
+  /* REDUCIDO: De 40px 50px a 24px 32px */
+  padding: 24px 32px;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 50px;
+  /* REDUCIDO: De 50px a 24px */
+  margin-bottom: 24px;
 }
 
 .header h1 {
-  font-size: 4rem;
+  /* REDUCIDO: De 4rem (~64px) a 1.8rem (~28px) */
+  font-size: 1.8rem;
   color: #0f172a;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .header p {
-  max-width: 950px;
+  max-width: 750px;
   margin: auto;
-  font-size: 1.7rem;
-  line-height: 1.6;
+  /* REDUCIDO: De 1.7rem a 0.95rem (~15px) */
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #4b5563;
 }
 
@@ -33,15 +37,18 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 40px;
+  /* REDUCIDO: De 32px a 16px */
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .card {
   background: white;
-  border-radius: 24px;
-  padding: 34px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  /* REDUCIDO: De 24px a 14px */
+  border-radius: 14px;
+  /* REDUCIDO: De 34px a 20px */
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border: 1px solid #d1d5db;
 }
 
@@ -54,13 +61,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  /* REDUCIDO: De 30px a 16px */
+  margin-bottom: 16px;
 }
 
 .iconBox {
-  width: 70px;
-  height: 70px;
-  border-radius: 18px;
+  /* REDUCIDO: De 70px a 44px */
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.15);
 
   display: flex;
@@ -70,27 +79,31 @@
 
 .badge {
   background: rgba(255, 255, 255, 0.2);
-  padding: 10px 18px;
+  /* REDUCIDO */
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
 .mainCard h2,
 .card h2 {
-  font-size: 4rem;
+  /* REDUCIDO: Los números grandes pasan de 4rem (~64px) a 2rem (~32px) */
+  font-size: 2rem;
   margin: 0;
 }
 
 .mainCard p {
-  font-size: 1.5rem;
-  margin: 10px 0 30px;
+  /* REDUCIDO */
+  font-size: 0.95rem;
+  margin: 6px 0 16px;
   color: #d1fae5;
 }
 
 .progressBar {
   width: 100%;
-  height: 12px;
+  /* REDUCIDO: De 12px a 8px */
+  height: 8px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   overflow: hidden;
@@ -104,15 +117,16 @@
 
 .blueIcon,
 .yellowIcon {
-  width: 70px;
-  height: 70px;
-  border-radius: 18px;
+  /* REDUCIDO: De 70px a 44px */
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-bottom: 24px;
+  /* REDUCIDO */
+  margin-bottom: 14px;
 }
 
 .blueIcon {
@@ -126,14 +140,16 @@
 }
 
 .card h3 {
-  font-size: 1.8rem;
-  margin: 12px 0;
+  /* REDUCIDO: De 1.8rem a 1.1rem */
+  font-size: 1.1rem;
+  margin: 8px 0;
   color: #4b5563;
 }
 
 .card span {
   color: #6b7280;
-  font-size: 1.3rem;
+  /* REDUCIDO: De 1.3rem a 0.85rem */
+  font-size: 0.85rem;
 }
 
 /* CONTENT */
@@ -141,14 +157,16 @@
 .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 30px;
+  /* REDUCIDO */
+  gap: 20px;
 }
 
 .left,
 .right {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  /* REDUCIDO */
+  gap: 20px;
 }
 
 /* HISTORY */
@@ -156,27 +174,32 @@
 .historyHeader {
   background: #0d9488;
   color: white;
-  font-size: 1.8rem;
+  /* REDUCIDO: De 1.8rem a 1.1rem */
+  font-size: 1.1rem;
   font-weight: 700;
-  padding: 24px 32px;
-  border-radius: 24px 24px 0 0;
+  /* REDUCIDO */
+  padding: 16px 24px;
+  border-radius: 14px 14px 0 0;
 }
 
 .filters {
   background: white;
-  padding: 24px 32px;
+  /* REDUCIDO */
+  padding: 14px 24px;
   display: flex;
-  gap: 14px;
+  gap: 10px;
   border-left: 1px solid #d1d5db;
   border-right: 1px solid #d1d5db;
 }
 
 .filters button {
   border: none;
-  padding: 14px 24px;
-  border-radius: 14px;
+  /* REDUCIDO */
+  padding: 10px 18px;
+  border-radius: 8px;
   background: #f3f4f6;
-  font-size: 1.2rem;
+  /* REDUCIDO: De 1.2rem a 0.85rem */
+  font-size: 0.85rem;
   cursor: pointer;
 }
 
@@ -187,73 +210,81 @@
 
 .sessions {
   background: white;
-  border-radius: 0 0 24px 24px;
-  padding: 30px;
+  border-radius: 0 0 14px 14px;
+  /* REDUCIDO: De 30px a 20px */
+  padding: 20px;
   border: 1px solid #d1d5db;
   border-top: none;
 
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  /* REDUCIDO */
+  gap: 16px;
 
-  max-height: 650px;
+  max-height: 500px;
   overflow-y: auto;
 }
 
 .sessionCard {
   background: #ecfdf5;
-  border-left: 6px solid #22c55e;
-  border-radius: 18px;
-  padding: 26px;
+  border-left: 4px solid #22c55e;
+  /* REDUCIDO */
+  border-radius: 12px;
+  padding: 18px;
 
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
 }
 
 .sessionCard h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  /* REDUCIDO: De 2rem a 1.15rem */
+  font-size: 1.15rem;
+  margin-bottom: 6px;
   color: #111827;
 }
 
 .sessionCard p {
-  font-size: 1.4rem;
+  /* REDUCIDO: De 1.4rem a 0.9rem */
+  font-size: 0.9rem;
   color: #4b5563;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .sessionInfo {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .sessionInfo span {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 
-  font-size: 1.2rem;
+  /* REDUCIDO: De 1.2rem a 0.8rem */
+  font-size: 0.8rem;
   color: #4b5563;
 }
 
 .tags {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .socialTag,
 .doneTag {
   border-radius: 999px;
-  padding: 10px 18px;
-  font-size: 1rem;
+  /* REDUCIDO */
+  padding: 6px 12px;
+  /* REDUCIDO: De 1rem a 0.8rem */
+  font-size: 0.8rem;
   font-weight: 600;
 
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .socialTag {
@@ -271,28 +302,32 @@
 .verifyCard,
 .infoCard {
   background: white;
-  border-radius: 24px;
-  padding: 30px;
+  /* REDUCIDO: De 24px a 14px */
+  border-radius: 14px;
+  /* REDUCIDO: De 30px a 20px */
+  padding: 20px;
   border: 1px solid #d1d5db;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .verifyCard {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  /* REDUCIDO */
+  gap: 18px;
 }
 
 .verifyItem {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }
 
 .greenCircle,
 .yellowCircle {
-  width: 48px;
-  height: 48px;
+  /* REDUCIDO: De 48px a 36px */
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 
   display: flex;
@@ -311,15 +346,17 @@
 }
 
 .verifyItem h3 {
-  font-size: 1.5rem;
+  /* REDUCIDO: De 1.5rem a 0.95rem */
+  font-size: 0.95rem;
   margin: 0;
   color: #111827;
 }
 
 .verifyItem p {
-  margin-top: 6px;
+  margin-top: 4px;
   color: #6b7280;
-  font-size: 1.1rem;
+  /* REDUCIDO: De 1.1rem a 0.8rem */
+  font-size: 0.8rem;
 }
 
 .infoCard {
@@ -328,9 +365,10 @@
 }
 
 .infoIcon {
-  width: 68px;
-  height: 68px;
-  border-radius: 18px;
+  /* REDUCIDO: De 68px a 44px */
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   background: #2563eb;
   color: white;
 
@@ -338,24 +376,28 @@
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 26px;
+  /* REDUCIDO */
+  margin-bottom: 16px;
 }
 
 .infoCard h2 {
-  font-size: 2.2rem;
-  margin-bottom: 24px;
+  /* REDUCIDO: De 2.2rem a 1.2rem */
+  font-size: 1.2rem;
+  margin-bottom: 14px;
   color: #111827;
 }
 
 .infoCard ul {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding-left: 20px;
+  /* REDUCIDO */
+  gap: 10px;
+  padding-left: 16px;
 }
 
 .infoCard li {
-  font-size: 1.4rem;
+  /* REDUCIDO: De 1.4rem a 0.85rem */
+  font-size: 0.85rem;
   color: #4b5563;
 }
 
@@ -363,31 +405,34 @@
 
 .uploadBtn {
   width: 100%;
-  height: 74px;
+  /* REDUCIDO: Un botón gigante de 74px baja a unos equilibrados 42px */
+  height: 42px;
 
   border: none;
-  border-radius: 18px;
+  /* REDUCIDO: De 18px a 8px */
+  border-radius: 8px;
 
   background: #0d9488;
   color: white;
 
-  font-size: 1.7rem;
+  /* REDUCIDO: De 1.7rem a 0.95rem */
+  font-size: 0.95rem;
   font-weight: 700;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
 
   cursor: pointer;
   transition: 0.2s ease;
 
-  box-shadow: 0 6px 18px rgba(13, 148, 136, 0.25);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
 }
 
 .uploadBtn:hover {
   opacity: 0.92;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 /* RESPONSIVE */
@@ -404,15 +449,15 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 25px 18px;
+    padding: 16px;
   }
 
   .header h1 {
-    font-size: 2.7rem;
+    font-size: 1.5rem;
   }
 
   .header p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .sessionCard {
@@ -426,6 +471,6 @@
 
   .mainCard h2,
   .card h2 {
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
 }
