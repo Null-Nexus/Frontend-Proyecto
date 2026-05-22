@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f5f7fa;
   --foreground: #171717;
 }
 
@@ -12,24 +12,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* QUITA EL DARK MODE */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
+html,
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
 }
 
 .cont {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    width: 100%;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+
+  width: 100%;
+
+  margin-top: 40px;
+  padding: 40px;
+
+  flex-wrap: wrap;
+
+  background: #f5f7fa;
+  border-radius: 20px;
+
+  box-sizing: border-box;
 }

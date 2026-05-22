@@ -1,14 +1,13 @@
 .container {
-  max-width: 400px;
-  margin: 40px 0;
+  width: 340px;
   font-family: sans-serif;
 }
 
 .card {
-  background: #f5f6f7;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .header {
@@ -17,75 +16,118 @@
   align-items: center;
 }
 
+.header h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #111827;
+}
+
 .btn {
-  background: #0d9488;
+  background: #0f766e;
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 12px 18px;
+  border-radius: 12px;
   cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #115e59;
 }
 
 .list {
-  margin-top: 12px;
-  max-height: 300px;
+  margin-top: 20px;
+  max-height: 500px;
   overflow-y: auto;
+  padding-right: 5px;
 }
 
 .item {
-  padding: 12px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .item h4 {
-  margin: 0 0 6px;
-  font-size: 14px;
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .item p {
-  margin: 2px 0;
-  font-size: 13px;
+  margin: 8px 0;
+  font-size: 0.95rem;
 }
 
-/* Prioridades */
 .alta {
-  background: #f8d7da;
-  border-left: 5px solid #dc2626;
+  background: #fee2e2;
+  border-left: 6px solid #dc2626;
+  color: #b91c1c;
 }
 
 .media {
   background: #fef3c7;
-  border-left: 5px solid #f59e0b;
+  border-left: 6px solid #f59e0b;
+  color: #b45309;
 }
 
 .baja {
   background: #d1fae5;
-  border-left: 5px solid #10b981;
+  border-left: 6px solid #10b981;
+  color: #047857;
 }
 
-/* Leyenda */
 .legend {
   margin-top: 20px;
-  padding: 16px;
-  border: 1px solid #6ee7b7;
-  border-radius: 12px;
   background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-radius: 16px;
+  padding: 18px;
+  color: #1f2937;
+}
+
+.legend h4 {
+  color: #0f172a;
+  margin-bottom: 12px;
 }
 
 .legend-item {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  margin-right: 8px;
 }
 
-.dot.alta { background: #dc2626; }
-.dot.media { background: #f59e0b; }
-.dot.baja { background: #10b981; }
+.dot.alta {
+  background: #dc2626;
+}
+
+.dot.media {
+  background: #f59e0b;
+}
+
+.dot.baja {
+  background: #10b981;
+}
+
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}

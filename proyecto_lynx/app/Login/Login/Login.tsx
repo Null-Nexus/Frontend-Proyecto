@@ -1,9 +1,71 @@
 "use client";
 import React, { useState } from 'react';
 import styles from './Login.module.css';
+import { supabase } from "../../lib/supabase";
 
 const Login: React.FC = () => {
   const [role, setRole] = useState<'alumno' | 'asesor'>('alumno');
+  const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    correo: "",
+    contrasenia: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      // 1. Buscamos al usuario por su correo institucional
+      // Usamos .trim() para evitar errores por espacios accidentales al inicio o final
+      const { data: usuarios, error } = await supabase
+        .from("estudiante")
+        .select("*")
+        .eq("correo_institucional", formData.correo.trim());
+
+      if (error) throw error;
+
+      // 2. Verificamos si encontramos algún registro
+      if (!usuarios || usuarios.length === 0) {
+        throw new Error("El correo ingresado no está registrado.");
+      }
+
+      // 3. Comparamos la contraseña del primer usuario encontrado
+      const usuarioEncontrado = usuarios[0];
+
+      // IMPORTANTE: Revisa si en tu tabla es 'contrasena' o 'contrasenia'
+      if (usuarioEncontrado.contrasena !== formData.contrasenia) {
+        throw new Error("La contraseña es incorrecta.");
+      }
+
+      // LOGIN EXITOSO
+      alert(`¡Bienvenido de nuevo, ${usuarioEncontrado.nombre}!`);
+
+      // Guardar sesión
+      localStorage.setItem(
+        "usuario",
+      JSON.stringify(usuarioEncontrado)
+      );
+
+      // Redireccionar
+      window.location.href =
+        `/Alumno/${usuarioEncontrado.id_estudiante}`; 
+
+    } catch (error: any) {
+      alert("Error de acceso: " + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -41,29 +103,43 @@ const Login: React.FC = () => {
               onClick={() => setRole('alumno')}
             >
               <strong>Soy Alumno. 🧑‍🎓 </strong>
-              <p>Busco asesorías y organizar mis tareas</p>
+              <p>Busco asesorías</p>
             </div>
             <div 
               className={`${styles.roleCard} ${role === 'asesor' ? styles.active : ''}`}
               onClick={() => setRole('asesor')}
             >
               <strong>Soy Asesor. 🧑‍🏫 </strong>
-              <p>Quiero dar asesorías y compartir conocimiento</p>
+              <p>Quiero dar asesorías</p>
             </div>
           </div>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.inputGroup}>
               <label>Correo Institucional</label>
               <div className={styles.inputWrapper}>
-                <input type="email" placeholder="tu.correo@unam.mx" />
+                <input 
+                  type="email" 
+                  name="correo"
+                  placeholder="tu.correo@unam.mx" 
+                  value={formData.correo}
+                  onChange={handleChange}
+                  required
+                />
               </div>
             </div>
 
             <div className={styles.inputGroup}>
               <label>Contraseña</label>
               <div className={styles.inputWrapper}>
-                <input type="password" placeholder="••••••••" />
+                <input 
+                  type="password" 
+                  name="contrasenia"
+                  placeholder="••••••••" 
+                  value={formData.contrasenia}
+                  onChange={handleChange}
+                  required
+                />
               </div>
             </div>
 
@@ -74,8 +150,12 @@ const Login: React.FC = () => {
               <a href="#" className={styles.forgotPass}>¿Olvidaste tu contraseña?</a>
             </div>
 
-            <button type="submit" className={styles.loginBtn}>
-              Iniciar Sesión →
+            <button 
+              type="submit" 
+              className={styles.loginBtn}
+              disabled={loading}
+            >
+              {loading ? "Verificando..." : "Iniciar Sesión →"}
             </button>
           </form>
 

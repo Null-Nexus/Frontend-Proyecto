@@ -1,39 +1,93 @@
-import styles from "./calendario.module.css"
+"use client";
+
+import { useState } from "react";
+import styles from "./calendario.module.css";
+
 export default function Calendario() {
-    return (
-            <div className={styles.calendarioWrapper}>
-      <table className={styles.tablaCalendario}>
-        <caption className={styles.tituloMes}>Abril 2026</caption>
-        <thead>
-          <tr>
-            <th>Lu</th>
-            <th>Ma</th>
-            <th>Mi</th>
-            <th>Ju</th>
-            <th>Vi</th>
-            <th>Sá</th>
-            <th>Do</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-          </tr>
-          <tr>
-            <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-          </tr>
-          <tr>
-            <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
-          </tr>
-          <tr>
-            <td className={styles.hoy}>20</td>
-            <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
-          </tr>
-          <tr>
-            <td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td>
-          </tr>
-        </tbody>
-      </table>
+
+  const [fechaActual, setFechaActual] = useState(new Date());
+
+  const meses = [
+    "Enero", "Febrero", "Marzo", "Abril",
+    "Mayo", "Junio", "Julio", "Agosto",
+    "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
+
+  const diasSemana = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+
+  const año = fechaActual.getFullYear();
+  const mes = fechaActual.getMonth();
+
+  const primerDia = new Date(año, mes, 1).getDay();
+  const diasEnMes = new Date(año, mes + 1, 0).getDate();
+
+  const hoy = new Date();
+
+  const cambiarMes = (direccion: number) => {
+    setFechaActual(new Date(año, mes + direccion, 1));
+  };
+
+  const dias = [];
+
+  for (let i = 0; i < primerDia; i++) {
+    dias.push(null);
+  }
+
+  for (let i = 1; i <= diasEnMes; i++) {
+    dias.push(i);
+  }
+
+  return (
+    <div className={styles.container}>
+
+      <div className={styles.header}>
+        <h2>
+          {meses[mes]} {año}
+        </h2>
+
+        <div className={styles.controls}>
+          <button onClick={() => cambiarMes(-1)}>
+            ◀
+          </button>
+
+          <button
+            onClick={() => setFechaActual(new Date())}
+          >
+            Hoy
+          </button>
+
+          <button onClick={() => cambiarMes(1)}>
+            ▶
+          </button>
+        </div>
+      </div>
+
+      <div className={styles.weekdays}>
+        {diasSemana.map((dia) => (
+          <div key={dia}>{dia}</div>
+        ))}
+      </div>
+
+      <div className={styles.grid}>
+        {dias.map((dia, index) => {
+
+          const esHoy =
+            dia &&
+            hoy.getDate() === dia &&
+            hoy.getMonth() === mes &&
+            hoy.getFullYear() === año;
+
+          return (
+            <div
+              key={index}
+              className={`${styles.day} ${esHoy ? styles.hoy : ""}`}
+            >
+              {dia}
+            </div>
+          );
+        })}
+      </div>
+
     </div>
-    );
+  );
 }
