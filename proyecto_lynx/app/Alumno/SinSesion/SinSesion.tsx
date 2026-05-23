@@ -4,9 +4,7 @@ import styles from "./SinSesion.module.css";
 export default function SinSesion() {
   return (
     <main className={styles.container}>
-
       <div className={styles.card}>
-
         <h1 className={styles.title}>
           No has iniciado sesión
         </h1>
@@ -15,14 +13,12 @@ export default function SinSesion() {
           Debes iniciar sesión para acceder a esta página.
         </p>
 
-        <Link href="/login">
+        <Link href="/Login">
           <button className={styles.button}>
             Ir al Login
           </button>
         </Link>
-
       </div>
-
     </main>
   );
 }
