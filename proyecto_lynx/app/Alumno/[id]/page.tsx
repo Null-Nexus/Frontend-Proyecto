@@ -38,7 +38,7 @@ export default async function Home({ params }: Props) {
     );
   }
 
-  return (
+   return (
     <>
       <PanelAlumno estudiante={estudiante} />
 
