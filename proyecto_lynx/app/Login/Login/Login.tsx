@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './Login.module.css';
 import { supabase } from "../../lib/supabase";
 
 const Login: React.FC = () => {
+  const router = useRouter();
   const [role, setRole] = useState<'alumno' | 'asesor'>('alumno');
   const [loading, setLoading] = useState(false);
 
@@ -26,7 +28,6 @@ const Login: React.FC = () => {
 
     try {
       // 1. Buscamos al usuario por su correo institucional
-      // Usamos .trim() para evitar errores por espacios accidentales al inicio o final
       const { data: usuarios, error } = await supabase
         .from("estudiante")
         .select("*")
@@ -42,7 +43,6 @@ const Login: React.FC = () => {
       // 3. Comparamos la contraseña del primer usuario encontrado
       const usuarioEncontrado = usuarios[0];
 
-      // IMPORTANTE: Revisa si en tu tabla es 'contrasena' o 'contrasenia'
       if (usuarioEncontrado.contrasena !== formData.contrasenia) {
         throw new Error("La contraseña es incorrecta.");
       }
@@ -53,12 +53,11 @@ const Login: React.FC = () => {
       // Guardar sesión
       localStorage.setItem(
         "usuario",
-      JSON.stringify(usuarioEncontrado)
+        JSON.stringify(usuarioEncontrado)
       );
 
-      // Redireccionar
-      window.location.href =
-        `/Alumno/${usuarioEncontrado.id_estudiante}`; 
+      // Redireccionar usando el router de Next.js
+      router.push(`/Alumno/${usuarioEncontrado.id_estudiante}`); 
 
     } catch (error: any) {
       alert("Error de acceso: " + error.message);

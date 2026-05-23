@@ -1,11 +1,34 @@
+"use client";
+
+import { useEffect, useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation'; // 1. Agregamos usePathname
 import Link from 'next/link';
 import styles from './header.module.css';
 
 export default function Header() {
+  const router = useRouter();
+  const pathname = usePathname(); // 2. Guardamos la ruta actual
+  const [sesionActiva, setSesionActiva] = useState(false);
+
+  // 3. Este useEffect ahora se dispara cada vez que la ruta (pathname) cambia
+  useEffect(() => {
+    const usuarioLocal = localStorage.getItem("usuario");
+    if (usuarioLocal) {
+      setSesionActiva(true);
+    } else {
+      setSesionActiva(false); // Es importante regresarlo a false si no hay sesión
+    }
+  }, [pathname]);
+
+  const handleCerrarSesion = () => {
+    localStorage.removeItem("usuario");
+    setSesionActiva(false);
+    router.push("/Login");
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        {/* Envolvemos el logo para que al dar clic siempre regrese al inicio */}
         <Link href="/" className={styles.logoLink} style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
           <div className={styles.logoIcon}>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +44,6 @@ export default function Header() {
       </div>
 
       <nav className={styles.nav}>
-        {/* Cambiamos <a> por <Link> */}
         <Link href="/Inicio" className={`${styles.navLink} ${styles.active}`}>Inicio</Link>
         <Link href="/Alumno" className={styles.navLink}>Alumno</Link>
         <Link href="/Asesores" className={styles.navLink}>Asesor</Link>
@@ -37,11 +59,24 @@ export default function Header() {
       </nav>
 
       <div className={styles.actions}>
-        <a href="/Login" className={styles.loginBtn}>Iniciar Sesión</a>
-        <Link href="/Registro" className={styles.registerBtn}>
-          Registrarse
-        </Link>
-
+        {sesionActiva ? (
+          <button 
+            onClick={handleCerrarSesion} 
+            className={styles.loginBtn}
+            style={{ cursor: 'pointer', border: 'none', background: 'transparent' }}
+          >
+            Cerrar Sesión
+          </button>
+        ) : (
+          <>
+            <Link href="/Login" className={styles.loginBtn}>
+              Iniciar Sesión
+            </Link>
+            <Link href="/Registro" className={styles.registerBtn}>
+              Registrarse
+            </Link>
+          </>
+        )}
       </div>
     </header>
   );
