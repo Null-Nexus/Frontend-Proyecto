@@ -8,7 +8,6 @@ const tutores = [
     facultad: "Facultad de Ciencias",
     experiencia: "15 años de experiencia",
     asesorias: "342 asesorías dadas",
-    img: "",
   },
   {
     nombre: "Ing. Ana López",
@@ -17,7 +16,6 @@ const tutores = [
     facultad: "Facultad de Ingeniería",
     experiencia: "8 años de experiencia",
     asesorias: "256 asesorías dadas",
-    img: "",
   },
   {
     nombre: "Mtra. Patricia Ramírez",
@@ -26,7 +24,6 @@ const tutores = [
     facultad: "Facultad de Ciencias",
     experiencia: "12 años de experiencia",
     asesorias: "428 asesorías dadas",
-    img: "",
   },
   {
     nombre: "Dr. Roberto Sánchez",
@@ -35,7 +32,6 @@ const tutores = [
     facultad: "Facultad de Química",
     experiencia: "20 años de experiencia",
     asesorias: "567 asesorías dadas",
-    img: "",
   },
   {
     nombre: "Lic. María Fernández",
@@ -44,7 +40,6 @@ const tutores = [
     facultad: "Facultad de Filosofía y Letras",
     experiencia: "6 años de experiencia",
     asesorias: "178 asesorías dadas",
-    img: "",
   },
   {
     nombre: "Ing. Jorge Martínez",
@@ -53,7 +48,6 @@ const tutores = [
     facultad: "Facultad de Ingeniería",
     experiencia: "10 años de experiencia",
     asesorias: "298 asesorías dadas",
-    img: "",
   },
 ];
 
@@ -61,26 +55,34 @@ export default function Tutores() {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>Tutores Certificados</h2>
+
       <p className={styles.subtitle}>
-        Conecta con tutores verificados de la UNAM para recibir asesorías personalizadas
+        Conecta con tutores verificados de la UNAM para recibir asesorías
+        personalizadas
       </p>
 
       <div className={styles.grid}>
         {tutores.map((tutor, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.imageContainer}>
-               {tutor.img ? 
-               (<img src={tutor.img} alt={tutor.nombre} /> ) 
-               : (<div className={styles.placeholder}>
-                {tutor.nombre.charAt(0)}
+              <div className={styles.placeholder}>
+                {tutor.nombre
+                  .split(" ")
+                  .filter(
+                    (palabra) =>
+                      !["Dr.", "Ing.", "Mtra.", "Lic."].includes(palabra)
+                  )
+                  .slice(0, 2)
+                  .map((palabra) => palabra.charAt(0))
+                  .join("")}
+              </div>
+
+              <span className={styles.badge}>✔</span>
             </div>
-            )}
 
-  <span className={styles.badge}>✔</span>
-
-</div>
             <div className={styles.cardBody}>
               <h3>{tutor.nombre}</h3>
+
               <p className={styles.area}>{tutor.area}</p>
 
               <p className={styles.rating}>⭐ {tutor.rating}</p>
@@ -91,14 +93,18 @@ export default function Tutores() {
                 <li>{tutor.asesorias}</li>
               </ul>
 
-              <button className={styles.button}>Ver Perfil Completo</button>
+              <button className={styles.button}>
+                Ver Perfil Completo
+              </button>
             </div>
           </div>
         ))}
       </div>
 
       <div className={styles.footer}>
-        <button className={styles.allBtn}>Ver Todos los Tutores</button>
+        <button className={styles.allBtn}>
+          Ver Todos los Tutores
+        </button>
       </div>
     </section>
   );
