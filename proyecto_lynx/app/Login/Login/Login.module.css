@@ -7,7 +7,7 @@
 /* Sección Izquierda */
 .heroSection {
   flex: 1.2;
-  background: linear-gradient(rgba(64, 129, 124, 0.85), rgba(10, 48, 45, 0.85)), 
+  background: linear-gradient(rgba(64, 129, 124, 0.28), rgba(10, 48, 45, 0.28)), 
               url('https://www.acatlan.unam.mx/images/fes_05.jpg'); 
   background-size: cover;
   background-position: center;
@@ -48,7 +48,14 @@
   padding: 20px;
   border-radius: 12px;
   flex: 1;
+  transition: transform 0.2s ease;
+  cursor: pointer;
 }
+
+.statCard:hover {
+  transform: scale(1.05);
+}
+
 
 .statCard h3 {
   font-size: 1.8rem;
@@ -104,6 +111,11 @@
 .roleCard.active {
   border: 2px solid #2ec4b6;
   background-color: #f0fdfa;
+}
+
+.roleCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .inputGroup {

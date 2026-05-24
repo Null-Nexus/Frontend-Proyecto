@@ -172,6 +172,7 @@
 
 .messageBtn:hover {
   opacity: 0.9;
+   transform: scale(1.05);
 }
 
 .historyBtn {
@@ -181,6 +182,7 @@
 
 .historyBtn:hover {
   background: #e5e7eb;
+  transform: scale(1.05);
 }
 
 /* Responsive */

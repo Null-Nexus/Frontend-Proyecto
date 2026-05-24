@@ -35,7 +35,7 @@
  
 /* ── Tab bar ── */
 .tabBar {
-  background-color: #4caf82;
+  background-color: #0d9488;
   padding: 0.75rem 1rem;
   display: flex;
   gap: 0.5rem;
@@ -78,21 +78,26 @@
 }
  
 /* ── Fila de sesión ── */
+/* ── Fila de sesión ── */
 .row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 18px;
+  margin: 0 12px 12px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  border-left: 4px solid #22c55e;
   transition: background-color 0.15s;
+  gap: 16px;
 }
- 
+
 .row:last-child {
-  border-bottom: none;
+  margin-bottom: 12px;
 }
- 
+
 .row:hover {
-  background-color: #f9fafb;
+  background-color: #d1fae5;
 }
  
 .rowLeft {
@@ -101,12 +106,9 @@
   align-items: stretch;
 }
  
-.greenBar {
-  width: 4px;
-  border-radius: 9999px;
-  background-color: #1a6645;
-  flex-shrink: 0;
-  align-self: stretch;
+.list {
+  background: #ffffff;
+  padding: 12px 0;
 }
  
 .sessionInfo {
@@ -148,10 +150,7 @@
   gap: 0.25rem;
 }
  
-.metaIcon {
-  color: #9ca3af;
-}
- 
+
 /* ── Acciones / badges ── */
 .rowRight {
   display: flex;

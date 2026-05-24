@@ -1,13 +1,22 @@
+import React from "react";
+import { FileText, GraduationCap, Users, CalendarDays, Clock3, MapPin } from "lucide-react";
 import styles from './ProxAct.module.css';
 
-const actividades = [
+const actividades: {
+  titulo: string;
+  fecha: string;
+  hora: string;
+  extra: string;
+  prioridad: string;
+  icono: React.ReactNode;
+}[] = [
   {
     titulo: "Entrega de Proyecto Final - Cálculo Diferencial",
     fecha: "2025-01-15",
     hora: "23:59",
     extra: "Equipo Delta",
     prioridad: "alta",
-    icono: "📄",
+    icono: <FileText size={16} />,
   },
   {
     titulo: "Asesoría de Física Cuántica",
@@ -15,7 +24,7 @@ const actividades = [
     hora: "16:00",
     extra: "Dr. Carlos Méndez",
     prioridad: "media",
-    icono: "🎓",
+    icono: <GraduationCap size={16} />,
   },
   {
     titulo: "Reunión Equipo - Proyecto de Química",
@@ -23,7 +32,7 @@ const actividades = [
     hora: "14:00",
     extra: "Sala Virtual",
     prioridad: "media",
-    icono: "👥",
+    icono: <Users size={16} />,
   },
 ];
 
@@ -47,21 +56,18 @@ export default function Actividades() {
 
             <div
               key={index}
-              className={`
-                ${styles.item}
-                ${styles[actividad.prioridad]}
-              `}
+              className={`${styles.item} ${styles[actividad.prioridad]}`}
             >
 
               <h4>
                 {actividad.icono} {actividad.titulo}
               </h4>
 
-              <p>📅 {actividad.fecha}</p>
+              <p><CalendarDays size={14} /> {actividad.fecha}</p>
 
-              <p>⏰ {actividad.hora}</p>
+              <p><Clock3 size={14} /> {actividad.hora}</p>
 
-              <p>📌 {actividad.extra}</p>
+              <p><MapPin size={14} /> {actividad.extra}</p>
 
             </div>
           ))}
