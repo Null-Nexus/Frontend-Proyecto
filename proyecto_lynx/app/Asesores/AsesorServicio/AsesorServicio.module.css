@@ -4,7 +4,6 @@
   width: 100%;
   min-height: 100vh;
   background: #f3f4f6;
-  /* REDUCIDO: De 40px 50px a 24px 32px */
   padding: 24px 32px;
   box-sizing: border-box;
   font-family: sans-serif;
@@ -12,12 +11,10 @@
 
 .header {
   text-align: center;
-  /* REDUCIDO: De 50px a 24px */
   margin-bottom: 24px;
 }
 
 .header h1 {
-  /* REDUCIDO: De 4rem (~64px) a 1.8rem (~28px) */
   font-size: 1.8rem;
   color: #0f172a;
   margin-bottom: 8px;
@@ -26,7 +23,6 @@
 .header p {
   max-width: 750px;
   margin: auto;
-  /* REDUCIDO: De 1.7rem a 0.95rem (~15px) */
   font-size: 0.95rem;
   line-height: 1.5;
   color: #4b5563;
@@ -34,22 +30,28 @@
 
 /* TOP CARDS */
 
+/* TOP CARDS */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* REDUCIDO: De 32px a 16px */
   gap: 16px;
   margin-bottom: 24px;
 }
 
 .card {
-  background: white;
-  /* REDUCIDO: De 24px a 14px */
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  color: white;
   border-radius: 14px;
-  /* REDUCIDO: De 34px a 20px */
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border: 1px solid #d1d5db;
+  border: 1px solid #0f766e;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.3);
 }
 
 .mainCard {
@@ -61,17 +63,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* REDUCIDO: De 30px a 16px */
   margin-bottom: 16px;
 }
 
 .iconBox {
-  /* REDUCIDO: De 70px a 44px */
   width: 44px;
   height: 44px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.15);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +78,6 @@
 
 .badge {
   background: rgba(255, 255, 255, 0.2);
-  /* REDUCIDO */
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -88,13 +86,13 @@
 
 .mainCard h2,
 .card h2 {
-  /* REDUCIDO: Los números grandes pasan de 4rem (~64px) a 2rem (~32px) */
   font-size: 2rem;
   margin: 0;
+  color: white;
 }
 
-.mainCard p {
-  /* REDUCIDO */
+.mainCard p,
+.card p {
   font-size: 0.95rem;
   margin: 6px 0 16px;
   color: #d1fae5;
@@ -102,7 +100,6 @@
 
 .progressBar {
   width: 100%;
-  /* REDUCIDO: De 12px a 8px */
   height: 8px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
@@ -117,38 +114,25 @@
 
 .blueIcon,
 .yellowIcon {
-  /* REDUCIDO: De 70px a 44px */
   width: 44px;
   height: 44px;
   border-radius: 10px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  /* REDUCIDO */
   margin-bottom: 14px;
-}
-
-.blueIcon {
-  background: #dbeafe;
-  color: #2563eb;
-}
-
-.yellowIcon {
-  background: #fef3c7;
-  color: #ca8a04;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 .card h3 {
-  /* REDUCIDO: De 1.8rem a 1.1rem */
   font-size: 1.1rem;
   margin: 8px 0;
-  color: #4b5563;
+  color: #d1fae5;
 }
 
 .card span {
-  color: #6b7280;
-  /* REDUCIDO: De 1.3rem a 0.85rem */
+  color: #99f6e4;
   font-size: 0.85rem;
 }
 
@@ -157,7 +141,6 @@
 .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* REDUCIDO */
   gap: 20px;
 }
 
@@ -165,87 +148,86 @@
 .right {
   display: flex;
   flex-direction: column;
-  /* REDUCIDO */
   gap: 20px;
 }
 
-/* HISTORY */
+/* HISTORY SECTION */
 
-.historyHeader {
-  background: #0d9488;
-  color: white;
-  /* REDUCIDO: De 1.8rem a 1.1rem */
-  font-size: 1.1rem;
-  font-weight: 700;
-  /* REDUCIDO */
-  padding: 16px 24px;
-  border-radius: 14px 14px 0 0;
+.historySection {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
 }
 
-.filters {
-  background: white;
-  /* REDUCIDO */
-  padding: 14px 24px;
+/* TAB BAR */
+
+.tabBar {
+  background-color: #0d9488;
+  padding: 0.75rem 1rem;
   display: flex;
-  gap: 10px;
-  border-left: 1px solid #d1d5db;
-  border-right: 1px solid #d1d5db;
+  gap: 0.5rem;
 }
 
-.filters button {
+.tab {
+  padding: 0.375rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   border: none;
-  /* REDUCIDO */
-  padding: 10px 18px;
-  border-radius: 8px;
-  background: #f3f4f6;
-  /* REDUCIDO: De 1.2rem a 0.85rem */
-  font-size: 0.85rem;
   cursor: pointer;
+  background: transparent;
+  color: #ffffff;
+  transition: transform 0.2s ease, background-color 0.15s;
 }
 
-.activeBtn {
-  background: #0d9488 !important;
-  color: white;
+.tab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.08);
 }
+
+.tabActive {
+  background-color: #ffffff;
+  color: #0d9488;
+  transform: scale(1.08);
+}
+
+/* SESSIONS */
 
 .sessions {
   background: white;
-  border-radius: 0 0 14px 14px;
-  /* REDUCIDO: De 30px a 20px */
   padding: 20px;
-  border: 1px solid #d1d5db;
-  border-top: none;
-
   display: flex;
   flex-direction: column;
-  /* REDUCIDO */
   gap: 16px;
-
   max-height: 500px;
   overflow-y: auto;
+}
+
+.empty {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  padding: 2.5rem 0;
 }
 
 .sessionCard {
   background: #ecfdf5;
   border-left: 4px solid #22c55e;
-  /* REDUCIDO */
   border-radius: 12px;
   padding: 18px;
-
   display: flex;
   justify-content: space-between;
   gap: 16px;
 }
 
 .sessionCard h2 {
-  /* REDUCIDO: De 2rem a 1.15rem */
   font-size: 1.15rem;
   margin-bottom: 6px;
   color: #111827;
 }
 
 .sessionCard p {
-  /* REDUCIDO: De 1.4rem a 0.9rem */
   font-size: 0.9rem;
   color: #4b5563;
   margin-bottom: 12px;
@@ -261,8 +243,6 @@
   display: flex;
   align-items: center;
   gap: 6px;
-
-  /* REDUCIDO: De 1.2rem a 0.8rem */
   font-size: 0.8rem;
   color: #4b5563;
 }
@@ -276,12 +256,9 @@
 .socialTag,
 .doneTag {
   border-radius: 999px;
-  /* REDUCIDO */
   padding: 6px 12px;
-  /* REDUCIDO: De 1rem a 0.8rem */
   font-size: 0.8rem;
   font-weight: 600;
-
   display: flex;
   align-items: center;
   gap: 6px;
@@ -302,9 +279,7 @@
 .verifyCard,
 .infoCard {
   background: white;
-  /* REDUCIDO: De 24px a 14px */
   border-radius: 14px;
-  /* REDUCIDO: De 30px a 20px */
   padding: 20px;
   border: 1px solid #d1d5db;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -313,7 +288,6 @@
 .verifyCard {
   display: flex;
   flex-direction: column;
-  /* REDUCIDO */
   gap: 18px;
 }
 
@@ -325,11 +299,9 @@
 
 .greenCircle,
 .yellowCircle {
-  /* REDUCIDO: De 48px a 36px */
   width: 36px;
   height: 36px;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,7 +318,6 @@
 }
 
 .verifyItem h3 {
-  /* REDUCIDO: De 1.5rem a 0.95rem */
   font-size: 0.95rem;
   margin: 0;
   color: #111827;
@@ -355,7 +326,6 @@
 .verifyItem p {
   margin-top: 4px;
   color: #6b7280;
-  /* REDUCIDO: De 1.1rem a 0.8rem */
   font-size: 0.8rem;
 }
 
@@ -365,23 +335,18 @@
 }
 
 .infoIcon {
-  /* REDUCIDO: De 68px a 44px */
   width: 44px;
   height: 44px;
   border-radius: 10px;
   background: #2563eb;
   color: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* REDUCIDO */
   margin-bottom: 16px;
 }
 
 .infoCard h2 {
-  /* REDUCIDO: De 2.2rem a 1.2rem */
   font-size: 1.2rem;
   margin-bottom: 14px;
   color: #111827;
@@ -390,13 +355,11 @@
 .infoCard ul {
   display: flex;
   flex-direction: column;
-  /* REDUCIDO */
   gap: 10px;
   padding-left: 16px;
 }
 
 .infoCard li {
-  /* REDUCIDO: De 1.4rem a 0.85rem */
   font-size: 0.85rem;
   color: #4b5563;
 }
@@ -405,28 +368,19 @@
 
 .uploadBtn {
   width: 100%;
-  /* REDUCIDO: Un botón gigante de 74px baja a unos equilibrados 42px */
   height: 42px;
-
   border: none;
-  /* REDUCIDO: De 18px a 8px */
   border-radius: 8px;
-
   background: #0d9488;
   color: white;
-
-  /* REDUCIDO: De 1.7rem a 0.95rem */
   font-size: 0.95rem;
   font-weight: 700;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   cursor: pointer;
   transition: 0.2s ease;
-
   box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
 }
 
