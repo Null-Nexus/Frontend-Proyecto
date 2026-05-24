@@ -1,5 +1,5 @@
 .container {
-  width: 340px;
+  width: 640px;
   font-family: sans-serif;
 }
 
@@ -52,14 +52,17 @@
 }
 
 .item h4 {
-  margin: 0 0 14px;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 6px 0;
 }
 
 .item p {
-  margin: 8px 0;
-  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0;
 }
 
 .alta {

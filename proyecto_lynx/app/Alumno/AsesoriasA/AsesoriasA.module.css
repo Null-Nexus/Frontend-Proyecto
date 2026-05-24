@@ -5,27 +5,26 @@
   padding: 2.5rem 1rem;
   width: 100%;
 }
- 
+
 /* ── Encabezado ── */
 .header {
   text-align: center;
   margin-bottom: 2rem;
 }
- 
+
 .title {
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #111827;
 }
- 
+
 .subtitle {
   font-size: 0.875rem;
   color: #6b7280;
   margin-top: 0.25rem;
 }
- 
-/* ── Contenedor principal ── */
 
+/* ── Contenedor principal ── */
 .container {
   width: 100%;
   border-radius: 0.75rem;
@@ -33,21 +32,19 @@
   border: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
 }
- 
+
 /* ── Botón solicitar ── */
 .topBar {
   display: flex;
   justify-content: flex-end;
-  padding: 0.875rem 1rem;
-  background: #ffffff;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 0 0 0.875rem 0;
 }
- 
+
 .btnCrear {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #1a6645;
+  background-color: #0d9488;
   color: #ffffff;
   font-size: 0.875rem;
   font-weight: 500;
@@ -55,21 +52,22 @@
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.15s;
+  transition: background-color 0.15s, transform 0.2s ease;
 }
- 
+
 .btnCrear:hover {
-  background-color: #145236;
+  background-color: #0f766e;
+  transform: scale(1.05);
 }
- 
+
 /* ── Tab bar ── */
 .tabBar {
-  background-color: #4caf82;
+  background-color: #0d9488;
   padding: 0.75rem 1rem;
   display: flex;
   gap: 0.5rem;
 }
- 
+
 .tab {
   padding: 0.375rem 1rem;
   border-radius: 0.375rem;
@@ -81,97 +79,91 @@
   color: #ffffff;
   transition: transform 0.2s ease, background-color 0.15s;
 }
- 
+
 .tab:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.08);
 }
- 
+
 .tabActive {
   background-color: #ffffff;
-  color: #1a6645;
+  color: #0d9488;
   transform: scale(1.08);
 }
- 
+
 /* ── Lista ── */
 .list {
   background: #ffffff;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
 }
- 
+
 .empty {
   text-align: center;
   font-size: 0.875rem;
   color: #9ca3af;
   padding: 2.5rem 0;
 }
- 
+
 /* ── Fila ── */
 .row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 18px;
+  margin: 0 12px 12px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  border-left: 4px solid #22c55e;
   transition: background-color 0.15s;
+  gap: 16px;
 }
- 
+
 .row:last-child {
-  border-bottom: none;
+  margin-bottom: 12px;
 }
- 
+
 .row:hover {
-  background-color: #f9fafb;
+  background-color: #d1fae5;
 }
- 
+
 .rowLeft {
   display: flex;
   gap: 0.75rem;
   align-items: stretch;
 }
- 
+
 /* ── Barra de color izquierda ── */
 .colorBar {
-  width: 4px;
-  border-radius: 9999px;
-  flex-shrink: 0;
-  align-self: stretch;
+  display: none;
 }
- 
-.barGreen {
-  background-color: #1a6645;
-}
- 
-.barBlue {
-  background-color: #6366f1;
-}
- 
+
 /* ── Info ── */
 .info {
   display: flex;
   flex-direction: column;
   gap: 0.125rem;
 }
- 
+
 .tituloAsesoria {
   font-size: 0.875rem;
   font-weight: 600;
   color: #111827;
   margin: 0;
 }
- 
+
 .tutor {
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
 }
- 
+
 .tutor strong {
   font-weight: 600;
   color: #374151;
 }
- 
+
 .meta {
   display: flex;
   align-items: center;
@@ -180,18 +172,18 @@
   font-size: 0.75rem;
   color: #6b7280;
 }
- 
+
 .metaItem {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
- 
+
 .rating {
   margin-top: 0.375rem;
   font-size: 0.875rem;
 }
- 
+
 /* ── Acciones / badges ── */
 .rowRight {
   display: flex;
@@ -200,7 +192,7 @@
   flex-shrink: 0;
   margin-top: 0.125rem;
 }
- 
+
 .badgeCompletada {
   font-size: 0.75rem;
   font-weight: 500;
@@ -209,7 +201,7 @@
   background-color: #e6f4ee;
   color: #1a6645;
 }
- 
+
 .badgeConfirmada {
   font-size: 0.75rem;
   font-weight: 500;
@@ -218,19 +210,20 @@
   background-color: #eff6ff;
   color: #1d4ed8;
 }
- 
+
 .btnCalificar {
   font-size: 0.75rem;
   padding: 0.375rem 0.75rem;
   border-radius: 0.375rem;
-  background-color: #1a6645;
+  background-color: #0d9488;
   color: #ffffff;
   font-weight: 500;
   border: none;
   cursor: pointer;
-  transition: background-color 0.15s;
+  transition: background-color 0.15s, transform 0.2s ease;
 }
- 
+
 .btnCalificar:hover {
-  background-color: #145236;
+  background-color: #0f766e;
+  transform: scale(1.05);
 }
